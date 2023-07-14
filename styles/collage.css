@@ -15,11 +15,33 @@ img{
 }
 
 .verticale-collage img{
-    height: 50%;
+    height: calc(50% - 5px);
+
 }
 
 .square-collage{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
+}
+
+/* Responsive Meadia Query */
+
+@media screen and(max-width: 576px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .square-collage{
+        grid-template-columns: 1fr;
+    } 
+}
+
+/* medium devies  */
+@media screen and (min-width: 576) and (max-width: 992){
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
 }
